@@ -1,0 +1,49 @@
+.purpleBtn{
+
+    /* bg & border */
+    background:#5E34B6;
+    border: 2px solid #5E34B6;
+    border-radius: 50px;
+
+    /* text */
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    text-decoration: none;
+
+    /* position */
+    margin: 50px 0;
+    padding: 15px 50px;
+
+    /* animaton */
+    transition: 0.4s;
+}
+
+.purpleBtn:hover{
+
+    /* animaton */
+    animation-name: hover;
+    animation-duration: 0.65s;
+
+    /* bg & border */
+    background: none;
+
+    /* text */
+    color: #5E34B6;
+
+    /* shadow */
+    box-shadow: 10px 10px 40px rgba(97, 63, 170, 0.247);
+}
+
+
+/* //////////// */
+/* /////animatin /////// */
+/* //////////// */
+
+@keyframes hover{
+    0%{transform: scale(1);}
+    50%{transform: scale(1.1);}
+   100%{transform: scale(1);}
+}

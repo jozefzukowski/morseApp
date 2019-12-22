@@ -1,0 +1,52 @@
+
+.upperDiv{
+    
+    /* size */
+    width: 90%;
+    min-height: 90vh;
+
+    /* backgobnd */
+    background-image: url(img/19265\ —\ kopia.jpg);
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: center;
+    
+    /* positon */
+    padding: 50px 5%;
+   
+}
+
+.upperDiv___header{
+    padding: 100px 0;
+    
+}
+
+.aboutDiv{
+    padding: 200px 5%;
+    width: 90%;
+}
+
+.aboutDiv___img{
+    background: url(img/2286871.jpg);
+    background-size: cover;
+   
+}
+
+.endBox{
+    padding: 200px 0;
+
+    text-align: center;
+}
+.endBox > .title{
+    margin: 0 auto;
+}
+
+
+.mainDiv{
+    width: 80%;
+    height: 80%;
+
+    padding: 5%;
+
+    text-align: center;
+}
