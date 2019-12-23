@@ -1,0 +1,119 @@
+
+.upperDiv{
+    
+    /* size */
+    width: 90%;
+    min-height: 90vh;
+
+    /* backgobnd */
+    background-image: url(img/19265\ —\ kopia.jpg);
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: center;
+    
+    /* positon */
+    padding: 50px 5%;
+   
+}
+
+.upperDiv___header{
+    padding: 100px 0;
+    
+}
+
+.aboutDiv{
+    padding: 200px 5%;
+    width: 90%;
+}
+
+.aboutDiv___img{
+    background: url(img/2286871.jpg);
+    background-size: cover;
+   
+}
+
+.endBox{
+    padding: 200px 0;
+
+    text-align: center;
+}
+.endBox > .title{
+    margin: 0 auto;
+}
+
+
+.mainDiv{
+    width: 80%;
+    height: 80%;
+    margin: 5% auto;
+    padding: 5%;
+    border-radius: 25px;
+
+    text-align: center;
+}
+.bad{
+    animation-name: bad;
+    animation-duration: 0.5s;
+}
+@keyframes bad{
+    0%{box-shadow: 10px 10px 10px rgba(255, 0, 0, 0);}
+    50%{box-shadow: 0 0 50px rgba(255, 60, 0, 0.658);}
+    100%{box-shadow: 10px 10px 10px rgba(255, 0, 0, 0);}
+
+}
+.line{
+    background-color: #5E34B6;
+    display: block;
+    width: 400px;
+    margin: auto;
+}
+
+.line {
+    margin: 50px auto;
+    width: 50%;
+    -webkit-appearance: none;
+    height: 7px;
+    outline: none;
+    -webkit-transition: opacity 0.2s;
+    transition: opacity 0.2s;
+    -webkit-transition: 0.2s;
+    background: #5E34B6;
+  }
+  
+  .line::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 35px;
+    height: 35px;
+    background: #5E34B6;
+    -webkit-box-shadow: 0px 18px 40px rgba(14, 12, 143, 0.699);
+            box-shadow: 0px 18px 40px rgba(82, 66, 223, 0.788);
+    border-radius: 50px;
+    border: 3px solid#5E34B6;
+    -webkit-transition: .3s;
+    transition: .3s;
+    cursor: pointer;
+  }
+  
+  .line::-moz-range-thumb {
+    -webkit-appearance: none;
+    -webkit-transition: .3s;
+    transition: .3s;
+    -moz-appearance: none;
+         appearance: none;
+    width: 35px;
+    height: 35px;
+    border: 3px solid #5E34B6;
+    background: #5E34B6;
+    box-shadow: 0px 18px 40px rgba(139, 66, 223, 0.562);
+    border-radius: 50px;
+    cursor: pointer;
+  }
+ .line:focus::-moz-range-thumb {
+    background: #FFFFFF;
+  }
+  #point{
+      position: absolute;
+      top:10px;
+      right: 50px;
+  }
