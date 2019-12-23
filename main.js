@@ -1,8 +1,9 @@
    /* tworzenie classy pytanie */
    class question {
-        constructor(content, answer) {
+        constructor(content, answer, checkbox) {
             this.content = content;
             this.answer = answer;
+            this.checkbox = checkbox
         }
     }
     
@@ -36,16 +37,19 @@
     questions[23] = new question("Jak napisać X", "-..- ");
     questions[24] = new question("Jak napiać Y", "-.--");
     questions[25] = new question("Jak napisać Z", "--..");
+    questions[26] = new question("Czy koniec słowa //", 1, true);
+    questions[27] = new question("Jak napiać W", ".--");
+    questions[28] = new question("Czy medldunek rozpoczyna się ///", 1, true);
+    questions[29] = new question("Jak napiać Y", "-.--");
+    questions[30] = new question("Jak napisać Z", "--..");
 
  
 
     /* tworzenie uchwyów dla ementów pytanie i textinput */
     const questionHtml = document.querySelector('#question');
 
-    let number = Math.floor(Math.random()*questions.length);
+    
     let points = 0;
-    let repeat = document.querySelector('.inm')
-    questionHtml.innerHTML =  questions[number].content;
 
 
     /* nasuchiwanie na clikniecie na przycisk */
@@ -55,22 +59,54 @@
 
             if(input == questions[number].answer){
                 points++;
+                document.querySelector('.textInput').classList.remove('bad')
+
+                good();
+
+
             }
             else{
+                bad();
             }
             repeat ++;
-            if(repeat == 10){
+            if(repeat > getRepeat){
                 end();
             }
-            number = Math.floor(Math.random()*questions.length);
-
-            questionHtml.innerHTML =  questions[number].content;
+           question();
 
         });
 
-function end(){
-    document.querySelector('.mainDiv').innerHTML = 0;
 
-    document.querySelector('.mainDiv').innerHTML = `<h1 class="title">Twój wynik : ${points}</h1>`
+
+function bad(){
+    const input = document.querySelector('.textInput');
+
+    input.style.animation = bad;
 
 }
+
+function question(){
+    /* zmienne */
+    let number = Math.floor(Math.random()*questions.length); /* losowy numer pytania */
+    
+    /* ustawianie nagłwka  */
+    questionHtml.innerHTML =  questions[number].content;
+
+}
+/* funkcja end służy do wyświetlanie wyniku */
+function end(){
+    const mainDiv = document.querySelector('.mainDiv');
+    mainDiv.innerHTML = 0;
+    mainDiv.innerHTML = `<h1 class="title">Twój wynik : ${points}</h1>`
+
+}
+/* funkcja służy do podśiwetlani na czerwono inputa */
+function bad(){
+
+    const input = document.querySelector('.textInput');
+    input.style.animation = bad;
+
+}
+
+/* <input type="text" placeholder="odpowowiedź" class="textInput"><br> */
+
